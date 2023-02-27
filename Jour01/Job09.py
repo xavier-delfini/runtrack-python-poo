@@ -4,6 +4,9 @@ class Produit:
         self.prixHT=prixHT
         self.TVA=1.20
 
+    def __str__(self):
+        return self.afficher()
+    
     def calc_price_with_TVA(self):
         return self.prixHT*self.TVA
 
@@ -31,9 +34,9 @@ class Produit:
         }
         return infos
 
-    
+
 Prod1=Produit("VTT",500)
-print(Prod1.afficher())
+print(Prod1())
 Prod1.change_name("Vélo Tout Terrains")
 print(Prod1.show_name())
 Prod1.change_price(450)
