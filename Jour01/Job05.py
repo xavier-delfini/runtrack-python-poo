@@ -1,13 +1,37 @@
-class Personne:
-    def __init__(self,nom,prenom):
-        self.nom=nom
-        self.prenom=prenom
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-    def SePresenter(self):
-        print("Je suis "+self.prenom+" "+self.nom)
+    def afficherX(self):
+        print("x est égal à " + str(self.x))
 
-Per1 = Personne("Delfini", "Xavier")
-Per1.SePresenter()
+    def afficherY(self):
+        print("y est égal à " + str(self.y))
 
-Per2 = Personne("John", "Doe")
-Per2.SePresenter()
+    def afficherLesPoints(self):
+        self.afficherX()
+        self.afficherY()
+
+    def changerX(self,newX):
+        self.x=newX
+
+    def changerY(self,newY):
+        self.y=newY
+
+
+PT1=Point(14,12)
+PT1.afficherX()
+PT1.afficherY()
+
+PT1.afficherLesPoints()
+
+PT1.changerX(24)
+PT1.afficherX()
+
+PT1.changerY(54)
+PT1.afficherY()
+
+
+
+

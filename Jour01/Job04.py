@@ -1,4 +1,13 @@
-from Job01 import Operation as Op
+class Personne:
+    def __init__(self,nom,prenom):
+        self.nom=nom
+        self.prenom=prenom
 
-Op1 = Op()
-Op1.addition()
+    def SePresenter(self):
+        print("Je suis "+self.prenom+" "+self.nom)
+
+Per1 = Personne("Delfini", "Xavier")
+Per1.SePresenter()
+
+Per2 = Personne("John", "Doe")
+Per2.SePresenter()
