@@ -1,8 +1,8 @@
 class Produit:
-    def __init__(self,nom,prixHT):
-        self.nom=nom
-        self.prixHT=prixHT
-        self.TVA=1.20
+    def __init__(self, nom,prixHT):
+        self.nom = nom
+        self.prixHT = prixHT
+        self.TVA = 1.20
 
     def __str__(self):
         return self.afficher()
@@ -13,7 +13,7 @@ class Produit:
     def change_name(self, new_name):
         self.nom = new_name
 
-    def change_price(self,new_price):
+    def change_price(self, new_price):
         self.prixHT = new_price
 
     def show_name(self):
@@ -26,7 +26,7 @@ class Produit:
         return self.TVA
 
     def afficher(self):
-        infos={
+        infos = {
             "Nom produit": self.show_name(),
             "Prix Hors Taxes": self.show_price(),
             "Prix Avec Taxes": self.calc_price_with_TVA(),
@@ -35,8 +35,8 @@ class Produit:
         return infos
 
 
-Prod1=Produit("VTT",500)
-print(Prod1())
+Prod1=Produit("VTT", 500)
+print(Prod1.afficher())
 Prod1.change_name("Vélo Tout Terrains")
 print(Prod1.show_name())
 Prod1.change_price(450)
