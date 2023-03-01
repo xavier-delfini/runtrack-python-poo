@@ -39,10 +39,44 @@ class Equipe:
 
     def mettreAJourStatistiquesJoueur(self,Joueur):
         i=self.search_object_in_list(Joueur)
+        self.__liste_joueurs[i]=Joueur.afficherStatistiques()
 
     def search_object_in_list(self, object):
         i = 0
         for tache in self.__liste_joueurs:
-            if tache["Titre"] == object.afficherStatistiques():
+            if tache["Nom"] == object.afficherStatistiques()["Nom"]:
                 return i
             i += 1
+
+#OM
+Lopez=Joueur("Lopez",16,"GRD")
+Tavares=Joueur("Tavares",30,"MD")
+Bailly=Joueur("Bailly",3,"DG")
+Under=Joueur("Under",17,"BU")
+OM=Equipe("OM")
+OM.ajouterJoueur(Lopez)
+OM.ajouterJoueur(Tavares)
+OM.ajouterJoueur(Bailly)
+OM.ajouterJoueur(Under)
+print(OM.AfficherStatistiquesJoueurs())
+
+#PSG
+Donnarumma=Joueur("Donnarumma",99,"GRD")
+Ramos=Joueur("Ramos",4,"DD")
+Messi=Joueur("Messi",30,"BU")
+Mbappé=Joueur("Mbappé",7,"BU")
+PSG=Equipe("PSG")
+PSG.ajouterJoueur(Donnarumma)
+PSG.ajouterJoueur(Ramos)
+PSG.ajouterJoueur(Messi)
+PSG.ajouterJoueur(Mbappé)
+print(PSG.AfficherStatistiquesJoueurs())
+
+#Match
+Bailly.effectuerUnePasseDecisive()
+Under.marquerUnBut()
+Bailly.recevoirUnCartonJaune()
+Bailly.recevoirUnCartonRouge()
+OM.mettreAJourStatistiquesJoueur(Bailly)
+OM.mettreAJourStatistiquesJoueur(Under)
+print(OM.AfficherStatistiquesJoueurs())
