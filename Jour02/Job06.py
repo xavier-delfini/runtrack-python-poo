@@ -4,7 +4,7 @@ import random
 
 class Commande :
     def __init__(self):
-        self.__numero_commande = random.randint(1,9999)
+        self.__numero_commande = random.randint(1, 9999)
         self.__plats_commander =[]
         self.__status_commande = "En cours"
         self.__TVA = 1.20
