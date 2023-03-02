@@ -19,7 +19,7 @@ class Jeu:
 
     def choisirNiveau(self):
         while True:
-            difficulté = input("Bienvenue quel niveau de difficulté voulez vous selectionner ?(Facile=F,Normal=N,Difficile=D,Impossible=I")
+            difficulté = input("Bienvenue quel niveau de difficulté voulez vous selectionner ?(Facile=F,Normal=N,Difficile=D,Impossible=I):")
             match difficulté:
                 case "F":
                     self.__niveau = [15, 5]
@@ -44,7 +44,7 @@ class Jeu:
             IA.attaquer(Player)
         if self.verif_KO(Player, IA) == 1:
             print("Victoire de l'ordinateur")
-        elif self.verif_KO(Player, IA)==2:
+        elif self.verif_KO(Player, IA) == 2:
             print("Victoire du joueur")
     def verif_KO(self, player, IA):
         if player.get_vie() == 0:
